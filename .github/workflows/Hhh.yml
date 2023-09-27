@@ -12,12 +12,9 @@ on:
   
 jobs:
   build:
-    name: Start Building...
     runs-on: windows-latest
 
-
-   steps:
-   
+    steps:
     - uses: actions/checkout@v2
     - name: Initializing Setup
       run: ./setup.ps1
