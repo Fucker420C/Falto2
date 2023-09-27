@@ -16,12 +16,6 @@ jobs:
 
    steps:
     - uses: actions/checkout@v2
-    - name: Initializing Setup
-      run: ./setup.ps1
-    - name: Starting CRD
-      run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
-    - name: Keep Alive
-      run: ./timeout.ps1
 
       run: |
 
@@ -32,6 +26,15 @@ jobs:
     - name: Log In To AnyDesk
 
       run: cmd /c show.bat
+
+    - name: Initializing Setup
+      run: ./setup.ps1
+    - name: Starting CRD
+      run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
+    - name: Keep Alive
+      run: ./timeout.ps1
+
     - name: Time Counter
 
       run: python time.py
+
