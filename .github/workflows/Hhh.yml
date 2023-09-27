@@ -34,7 +34,3 @@ jobs:
     - name: Keep Alive
       run: ./timeout.ps1
 
-    - name: Time Counter
-
-      run: python time.py
-
