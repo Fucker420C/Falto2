@@ -12,7 +12,7 @@ on:
   
 jobs:
   build:
-    runs-on: Chrome OS-latest
+    runs-on: Ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
